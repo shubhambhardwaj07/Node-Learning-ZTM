@@ -1,10 +1,11 @@
 const http = require("http");
-const express = require("express");
+const app = require("./app");
 
-const app = express();
 const PORT = process.env.PORT || 8000;
 
+// This is a better approach when we will use web sockets
 const server = http.createServer(app);
+
 server.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
 });
